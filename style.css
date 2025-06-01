@@ -1,0 +1,528 @@
+/* RESET DE BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+/* BASE */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background-color: #000;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px #fff, 0 0 10px #999;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #888;
+}
+
+/* SECTION HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.1);
+  padding: 100px 20px 40px;
+  text-align: center;
+  animation: fadeIn 2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  padding: 10px;
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown a {
+  display: block;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: #333;
+}
+
+.hero h2 {
+  font-size: 72px;
+  font-weight: bold;
+  color: #111;
+  margin: 0;
+  text-shadow: none;
+  line-height: 1.2;
+  text-align: center;
+}
+
+
+
+.hero-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* BOUTON CV */
+.cv-button {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #333;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h3 {
+  font-size: 32px;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+/* CARTES */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #000;
+}
+
+/* VERROUILLÉ */
+.locked {
+  opacity: 0.4;
+  position: relative;
+}
+
+.locked::after {
+  content: '\1F512 Année non réalisée';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 14px;
+  color: #666;
+  background: #eee;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+
+  .hero-image {
+    width: 160px; /* Dimensions conservées */
+    height: 160px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 10px;
+  }
+}
+/* Page noir & blanc - look propre et moderne */
+.locked-page {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #111;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.lock-container {
+  padding: 2rem 2.5rem;
+  border: 2px solid #111;
+  border-radius: 18px;
+  background-color: #f7f7f7;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  transition: transform 0.3s ease;
+}
+
+.lock-container:hover {
+  transform: scale(1.01);
+}
+
+.lock-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.lock-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.lock-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Animation pour le cadenas */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+.page-content {
+  padding-top: 100px; /* ajuste cette valeur selon la hauteur de ta barre */
+}
+body {
+  padding-top: 100px; /* adapte selon la hauteur de ta barre */
+}
+.page-title {
+  margin-top: 100px;
+}
+#competences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.intro-competences {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ccc;
+  text-align: center;
+}
+
+.radar-wrapper {
+  width: 450px;
+  height: 450px;
+  background-color: transparent;
+}
+
+
+
+.cv-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+
+.section.visible {
+  display: block;
+}
+
+
+
+
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.project-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project-card h4 {
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #111;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.project-card:hover .btn {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* --- Nouveaux styles pour les boutons de filtre --- */
+
+.filter-buttons {
+  text-align: center; /* Centre les boutons horizontalement */
+  margin: 30px 0; /* Ajoute de l'espace au-dessus et en dessous des boutons */
+}
+
+.filter-buttons button {
+  background-color: #111; /* Couleur de fond des boutons */
+  color: white; /* Couleur du texte des boutons */
+  border: none; /* Pas de bordure */
+  padding: 10px 20px; /* Espacement interne des boutons */
+  margin: 5px; /* Espacement entre les boutons */
+  border-radius: 5px; /* Bords légèrement arrondis */
+  cursor: pointer; /* Indique que l'élément est cliquable */
+  font-size: 16px; /* Taille de la police */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animation douce au survol */
+}
+
+.filter-buttons button:hover {
+  background-color: #333; /* Couleur de fond au survol */
+  transform: translateY(-2px); /* Léger déplacement vers le haut au survol */
+}
+
+.filter-buttons button.active {
+  background-color: #ff4d4d; /* Couleur de fond du bouton actif (celui qui est sélectionné) */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour le bouton actif */
+}
+
+/* --- Gestion de la visibilité des sections de projets --- */
+
+.section-project {
+  display: none; /* Cache toutes les sections de projet par défaut */
+}
+
+.section-project.visible {
+  display: block; /* Affiche les sections qui ont la classe 'visible' */
+  animation: fadeInProject 0.6s ease-out; /* Ajoute une animation d'apparition */
+}
+
+/* Animation d'apparition des projets */
+@keyframes fadeInProject {
+  from { opacity: 0; transform: translateY(20px); } /* Commence invisible et un peu décalé vers le bas */
+  to { opacity: 1; transform: translateY(0); } /* Termine visible et à sa position normale */
+}
+
+/* --- Styles pour les listes de compétences --- */
+/* Pour que vos puces ✅ s'affichent correctement */
+
+.section-project p.competence-item {
+  position: relative; /* Nécessaire pour positionner l'icône */
+  padding-left: 25px; /* Laisse de l'espace pour l'icône à gauche du texte */
+  margin-bottom: 0.5rem; /* Réduit l'espace entre les éléments de compétence */
+}
+
+.section-project p.competence-item::before {
+  content: '✅'; /* L'icône de puce personnalisée */
+  position: absolute; /* Positionne l'icône par rapport au parent */
+  left: 0; /* Place l'icône tout à gauche */
+  color: #4CAF50; /* Couleur verte pour l'icône, vous pouvez changer si vous voulez */
+}
+
+/* --- Styles pour le bouton de retour --- */
+/* Le bouton de retour "Retour à mon Portfolio" */
+
+.back-to-home {
+  display: inline-block; /* Pour que les marges et le padding fonctionnent bien */
+  margin-top: 20px; /* Espace au-dessus du bouton */
+  padding: 10px 20px; /* Rembourrage interne */
+  background-color: #007bff; /* Couleur de fond bleue (vous pouvez la changer) */
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Pas de soulignement */
+  border-radius: 5px; /* Bords arrondis */
+  transition: background-color 0.3s ease; /* Transition douce au survol */
+}
+
+.back-to-home:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+
+
+
+
+
+
+
+
+.about-page {
+  background-color: #111;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.foot-photo {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.foot-description {
+  max-width: 700px;
+  text-align: center;
+}
