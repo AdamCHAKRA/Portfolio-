@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUT SD1 - Mes Projets</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .project-section { /* Renommé pour plus de clarté */
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 58, 58, 0.1);
+      display: none; /* Tous les projets sont masqués par défaut */
+    }
+
+    .project-section.active { /* Classe pour afficher le projet actif */
+      display: block;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      flex-shrink: 0;
+      border-radius: 12px;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+      color: white;
+      font-size: 30px;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+    }
+
+    .carousel-btn.prev {
+      left: 10px;
+    }
+
+    .carousel-btn.next {
+      right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background-color: #eee;
+    }
+
+    .project-navigation {
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .project-navigation button {
+        background-color: #4CAF50; /* Couleur verte pour les boutons */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-navigation button:hover {
+        background-color: #45a049;
+    }
+
+    .project-navigation button.selected {
+        background-color: #007bff; /* Couleur bleue pour le bouton sélectionné */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mes projets - BUT SD1</h1>
+  </header>
+
+  <div class="project-navigation">
+    <button data-target="SAE101">SAE 101</button>
+    <button data-target="SAE102">SAE 102</button>
+    <button data-target="SAE103">SAE 103</button>
+    <button data-target="SAE104-105">SAE 104/105</button>
+    <button data-target="SAE106">SAE 106</button>
+    <button data-target="SAE201">SAE 201</button>
+    <button data-target="SAE202">SAE 202</button>
+    <button data-target="SAE203">SAE 203</button>
+    <button data-target="SAE204">SAE 204</button>
+    <button data-target="SAE206">SAE 206</button>
+  </div>
+
+  <section class="project-section" id="SAE101">
+    <h3>SAE 101 : Analyse de données statistiques</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE101/SAE101 photo 1.png" alt="Image projet 1 - 1" />
+        <img src="SAE101/SAE101 photo 2.png" alt="Image projet 1 - 2" />
+        <img src="SAE101/SAE101 photo 3.png" alt="Image projet 1 - 3" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+      
+        
+      <p>
+        AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client
+      </p>
+      <p>
+        AC11.02 | Respecter les formalismes de notation
+      </p>
+      <p>
+        AC11.03 | Connaître la syntaxe des langages et savoir l'utiliser
+      </p>
+      <p>
+        AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter
+      </p>
+      <p>
+        AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d'usage
+      </p>
+      <p>
+        AC11.06 | Prendre conscience de l’intérêt de la programmation
+      </p>
+        
+
+      <h3>L'objectif de cette SAE : </h3>
+        <p>
+            L’objectif principal de cette SAE était de mettre en pratique nos connaissances en tableur, reporting et base de données relationnelle. Le projet consistait à créer un reporting sur Excel en exploitant des données extraites d’une base Access, suivant un cahier des charges précis.
+        </p>
+        <h4>1. Analyse de la base et dictionnaire des données</h4>
+        <p>
+            o Création d’un dictionnaire de données pour toutes les tables, leurs attributs, les clés primaires et étrangères, ainsi que des statistiques (valeurs nulles, distinctes, etc.).
+        </p>
+        <h4>2. Requêtage et reporting Excel</h4>
+        <p>
+            o Écriture de requêtes SQL dans Access pour extraire des données spécifiques (ex : nombre de séries avec plusieurs saisons par année, top films les mieux notés, acteurs les mieux notés en 2020).
+        </p>
+        <p>
+            o Création de tableaux et graphiques pour visualiser les résultats (barres, points, graphiques).
+        </p>
+        <h4>3. Compte-rendu personnel de travail</h4>
+        <p>
+            o Rédaction d’un document décrivant la démarche suivie pour une requête choisie : formulation du besoin, construction de la requête SQL, création du reporting Excel.
+        </p>
+        <p>
+            o Présentation soignée avec entête, numérotation, table des matières, insertion de codes SQL et formules Excel.
+        </p>
+        <h3>Ce que j’ai appris grâce à cette SAE :</h3>
+        <p>
+            ✅ Analyser une base de données relationnelle : comprendre la structure des tables, les clés primaires et étrangères, et identifier les valeurs nulles ou distinctes.
+        </p>
+        <p>
+            ✅ Créer un dictionnaire de données : recenser les attributs de chaque table et en tirer des statistiques utiles.
+        </p>
+        <p>
+            ✅ Écrire des requêtes SQL dans Access : formuler des requêtes pour répondre à des besoins spécifiques (top films, acteurs les mieux notés, etc...).
+        </p>
+        <p>
+            ✅ Exploiter les résultats dans Excel : créer des reportings visuels (tableaux, graphiques) pour mieux interpréter les données.
+        </p>
+        <p>
+            ✅ Maîtriser les outils Excel et Access ensemble : relier extraction de données et visualisation pour une analyse cohérente.
+        </p>
+        <p>
+            ✅ Documenter et présenter un travail d’analyse : rédiger un compte-rendu structuré avec entête, requêtes SQL et captures Excel.
+        </p>
+        <p>
+            ✅ Développer une démarche d’analyse complète : de l’identification du besoin à la visualisation des résultats.
+        </p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE102">
+    <h3>SAE 102 : Projet de traitement</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE102/SAE102 photo 1.png" alt="Image projet 1 - 1" />
+        <img src="SAE102/SAE102 photo2.png" alt="Image projet 1 - 2" />
+        <img src="SAE102/SAE102 photo3.png" alt="Image projet 1 - 3" />
+        <img src="SAE102/SAE102 photo4.png" alt="Image projet 1 - 4" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+      <p>
+      <p>
+        AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client
+      </p>
+      <p>
+        AC11.02 | Respecter les formalismes de notation
+      </p>
+      <p>
+        AC11.03 | Connaître la syntaxe des langages et savoir l'utiliser
+      </p>
+      <p>
+        AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter
+      </p>
+      <p>
+        AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d'usage
+      </p>
+      <p>
+        AC11.06 | Prendre conscience de l’intérêt de la programmation
+      </p>
+  
+      <h3>Objectifs :</h3>
+        <p>
+            o Acquérir les bases essentielles pour un futur projet de traitement de données.
+        </p>
+        <p>
+            o Découvrir et manipuler des structures de données avancées : ensembles (sets) et dictionnaires (tableaux associatifs).
+        </p>
+        <p>
+            o Revoir et consolider les notions Python déjà apprises.
+        </p>
+        <p>
+            o Se perfectionner en programmation Python dans un environnement professionnel (Jupyter Lab).
+        </p>
+        <h3>Compétences développées :</h3>
+        <p>
+            ✅ Maîtrise des bases de la programmation Python appliquée aux fichiers et aux données textuelles.
+        </p>
+        <p>
+            ✅ Capable de développer un programme de conversion et traitement de fichiers texte, réparti en plusieurs parties, évaluées indépendamment.
+        </p>
+        <p>
+            ✅ Travail collaboratif et gestion de projet simple.
+        </p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE103">
+    <h3>SAÉ 1-03 Préparation et synthèses d’un tableau de donnée en vue d’une analyse exploratoire simple</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE103/SAE103 photo1.png" alt="Image projet 1 - 1" />
+        <img src="SAE103/SAE103 photo2.png" alt="Image projet 1 - 2" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+        
+        <p>
+          AC12.01 | Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)
+        </p>
+        <p>
+          AC12.02 | Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées
+        </p>
+        <p>
+          AC12.03 | Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique
+        </p>
+        <p>
+          AC12.04 | Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables.
+        </p>
+        <p>
+          AC12.05 | Comprendre l’intérêt de l’utilisation d’un modèle probabiliste
+        </p>
+        <p>
+          AC12.06 | Appréhender la notion de fluctuation d’échantillonnage, notamment à l’aide de simulations probabilistes
+        </p>
+          
+        
+        <h3>Objectifs :</h3>
+        <p>
+            o Analyser un rapport statistique économique sur la pêche française.
+        </p>
+        <p>
+            o Développer des compétences en analyse descriptive, critique et restitution orale.
+        </p>
+        <p>
+            o Comprendre la situation économique, les tendances et limites des données.
+        </p>
+        <p>
+            o Travailler en groupe et présenter un diaporama oral clair et synthétique.
+        </p>
+        <h3>Compétences développées :</h3>
+        <p>
+            ✅ J’ai appris à lire et analyser un rapport technique comportant graphiques, tableaux et texte, en comprenant comment ils se complètent.
+        </p>
+        <p>
+            ✅ J’ai développé la capacité à identifier les forces et limites d’un article statistique (qualité des données, représentativité, sources, lisibilité).
+        </p>
+        <p>
+            ✅ J’ai renforcé mes compétences pour décrypter des données chiffrées, interpréter des graphiques, et comprendre leur rôle dans le storytelling.
+        </p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE104-105">
+    <h3>SAÉ 1-04 / 1-05 Apprendre en situation la production de données en entreprise - Présentation en anglais d’un territoire économique et culturel</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE 104:105/SAE 104:105 photo1.png" alt="Image projet 1 - 1" />
+        <img src="SAE 104:105/SAE 104:105 photo2.png" alt="Image projet 1 - 2" />
+        <img src="SAE 104:105/SAE 104:105 photo3.png" alt="Image projet 1 - 3" />
+        <img src="SAE 104:105/SAE 104:105 photo4.png" alt="Image projet 1 - 4" />
+        <img src="SAE 104:105/SAE 104:105 photo5.png" alt="Image projet 1 - 5" />
+        <img src="SAE 104:105/SAE 104:105 photo6.png" alt="Image projet 1 - 6" />
+        <img src="SAE 104:105/SAE 104:105 photo7.png" alt="Image projet 1 - 7" />
+        <img src="SAE 104:105/SAE 104:105 photo8.png" alt="Image projet 1 - 8" />
+        <img src="SAE 104:105/SAE 104:105 photo9.png" alt="Image projet 1 - 9" />
+        <img src="SAE 104:105/SAE 104:105 photo10.png" alt="Image projet 1 - 10" />
+        <img src="SAE 104:105/SAE 104:105 photo11.png" alt="Image projet 1 - 11" />
+        <img src="SAE 104:105/SAE 104:105 photo12.png" alt="Image projet 1 - 12" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+        
+        <p>
+          AC13.01 | Prendre connaissance des biais rencontrés dans la mise en place d’une enquête
+        </p>
+        <p>
+          AC13.02 | Identifier l’importance de contextualiser ses données
+        </p>
+        <p>
+          AC13.03 | Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents
+        </p>
+        <p>
+          AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie
+        </p>
+        <p>
+          AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie
+        </p>
+        <p>
+          AC13.06 | Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats
+        </p>
+          
+        
+        <h3>Objectifs :</h3>
+        <p>
+            o Découvrir le fonctionnement d’un territoire économique et culturel à travers une étude de marché approfondie.
+        </p>
+        <p>
+            o Comprendre les enjeux de l’exportation d’un produit à l'international (ici, le cidre Kerisac).
+        </p>
+        <p>
+            o Mettre en œuvre une démarche de production de données : recherche, collecte, analyse et restitution.
+        </p>
+        <p>
+            o Travailler en groupe sur un projet concret, en lien avec la réalité d’une entreprise.
+        </p>
+        <p>
+            o Communiquer en anglais à l’oral, à l’écrit, et dans une présentation professionnelle.
+        </p>
+        <h3>Compétences développées :</h3>
+        <p>
+            ✅ Analyse de marché : étude des tendances de consommation, des profils clients, de la concurrence, et des opportunités économiques en Afrique du Sud.
+        </p>
+        <p>
+            ✅ Approche interculturelle : compréhension des particularités culturelles et économiques d’un autre pays.
+        </p>
+        <p>
+            ✅ Recherche et synthèse d’informations fiables via des sources variées (sites professionnels, bases de données, etc.).
+        </p>
+        <p>
+            ✅ Travail en équipe : coordination, répartition des tâches, communication collaborative.
+        </p>
+        <p>
+            ✅ Expression orale en anglais : présentation claire et structurée d’un projet commercial à l’international.
+        </p>
+        <p>
+            ✅ Organisation de données : structuration des résultats sous forme de livrable (diaporama, synthèse, oral…).
+        </p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE106">
+    <h3>SAE 106 : Mise en oeuvre d'une enquête</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE106/SAE106 photo1.png" alt="Image projet 1 - 1" />
+        <img src="SAE106/SAE106 photo2.png" alt="Image projet 1 - 2" />
+        <img src="SAE106/SAE106 photo3.png" alt="Image projet 1 - 3" />
+        <img src="SAE106/SAE106 photo4.png" alt="Image projet 1 - 4" />
+        <img src="SAE106/SAE106 photo5.png" alt="Image projet 1 - 5" />
+        <img src="SAE106/SAE106 photo6.png" alt="Image projet 1 - 6" />
+        <img src="SAE106/SAE106 photo7.png" alt="Image projet 1 - 7" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+        
+        <p>
+          AC13.01 | Prendre connaissance des biais rencontrés dans la mise en place d’une enquête
+        </p>
+        <p>
+          AC13.02 | Identifier l’importance de contextualiser ses données
+        </p>
+        <p>
+          AC13.03 | Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents
+        </p>
+        <p>
+          AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie
+        </p>
+        <p>
+          AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie
+        </p>
+        <p>
+          AC13.06 | Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats
+        </p>
+          
+        <h3>Objectifs :</h3>
+        <p>
+            o Évaluer dans quelle mesure les habitants connaissent l’association et ses actions.      </p>
+        <p>
+            o Recueillir les opinions, impressions et attentes des résidents concernant l’association.
+        </p>
+        <p>
+            o Concevoir un questionnaire adapté et diffuser une enquête auprès de la population cible pour obtenir des réponses exploitables.      </p>
+        <p>
+            o Identifier les niveaux de connaissance et les perceptions majeures au sein de la communauté locale
+        </p>
+        <p>
+            o Présenter les conclusions de manière claire, à l’aide de graphiques et tableaux, pour faciliter la compréhension du client.
+        </p>
+        <p>
+            o Aider l’association à mieux cibler ses communications et ses interventions en fonction des résultats de l’enquête.
+        </p>
+        <h3>Compétences développées :</h3>
+        <p>
+            ✅ <strong>Conception d’un questionnaire :</strong> J’ai appris à créer un questionnaire pertinent et structuré avec l’outil Sphinx, en ciblant une population spécifique.
+        </p>
+        <p>
+            ✅ <strong>Nettoyage et préparation des données :</strong> J’ai développé des compétences en nettoyage de données Excel, en supprimant les réponses hors cible et en préparant un jeu de données exploitable.
+        </p>
+        <p>
+            ✅ <strong>Analyse descriptive des données :</strong> J’ai pratiqué des analyses statistiques simples pour mieux comprendre les réponses recueillies.
+        </p>
+        <p>
+            ✅ <strong>Visualisation des données :</strong> J’ai créé des graphiques clairs et pertinents avec Excel pour présenter visuellement les résultats et faciliter la compréhension.
+        </p>
+        <p>
+            ✅ <strong>Communication avec un client :</strong> J’ai présenté les résultats de l’enquête à un client réel lors d’un rendez-vous, en expliquant clairement les données et leurs implications.
+        </p>
+        <p>
+            ✅ <strong>Travail en équipe :</strong> Ce projet m’a appris à collaborer efficacement avec mes coéquipiers, de la conception du questionnaire à la présentation finale.
+        <p>
+        <p>
+            ✅ <strong>Gestion de projet et rigueur méthodologique :</strong> J’ai appris à organiser un projet d’enquête de A à Z, en respectant les étapes clés : conception, nettoyage, analyse, visualisation, restitution.
+        <p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE201">
+    <h3>SAÉ 2-01 : Conception et implémentation d'une base de données relationnelle</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE201/SAE201 photo1.png" alt="Image projet 1 - 1" />
+        <img src="SAE201/SAE201 photo2.png" alt="Image projet 1 - 2" />
+        <img src="SAE201/SAE201 photo3.png" alt="Image projet 1 - 1" />
+        <img src="SAE201/SAE201 photo4.png" alt="Image projet 1 - 2" />
+        <img src="SAE201/SAE201 photo5.png" alt="Image projet 1 - 1" />
+        <img src="SAE201/SAE201 photo6.png" alt="Image projet 1 - 2" />
+        <img src="SAE201/SAE201 photo7.png" alt="Image projet 1 - 1" />
+        <img src="SAE201/SAE201 photo8.png" alt="Image projet 1 - 2" />
+        <img src="SAE201/SAE201 photo9.png" alt="Image projet 1 - 1" />
+        <img src="SAE201/SAE201 photo10.png" alt="Image projet 1 - 2" />
+        <img src="SAE201/SAE201 photo11.png" alt="Image projet 1 - 1" />
+        <img src="SAE201/SAE201 photo12.png" alt="Image projet 1 - 2" />
+        <img src="SAE201/SAE201 photo13.png" alt="Image projet 1 - 1" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+        
+        <p>
+          AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client
+        </p>
+        <p>
+          AC11.02 | Respecter les formalismes de notation
+        </p>
+        <p>
+          AC11.03 | Connaître la syntaxe des langages et savoir l'utiliser
+        </p>
+        <p>
+          AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter
+        </p>
+        <p>
+          AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d'usage
+        </p>
+        <p> 
+          AC11.06 | Prendre conscience de l’intérêt de la programmation
+        </p>
+          
+        <h3>Objectifs :</h3>
+        <p>
+            Concevoir et développer une base de données relationnelle complète à partir d’un besoin exprimé dans un cahier des charges. Ce projet a mobilisé toutes les étapes de création d’une BDR professionnelle :      </p>
+        <p>
+            o Analyse du besoin
+        </p>
+        <p>
+            o Modélisation conceptuelle et relationnelle      </p>
+        <p>
+            o Implémentation dans un SGBDR (MS Access)
+        </p>
+        <p>
+            o Alimentation par des fichiers de données (.csv/.xlsx)
+        </p>
+        <p>
+            o Validation du fonctionnement
+        </p>
+        <p>
+            o Documentation complète de la solution
+        </p>
+        <h3>Compétences développées :</h3>
+        <p>
+            ✅ <strong>Analyse du besoin</strong> à partir d’un cahier des charges
+        </p>
+        <p>
+            ✅ <strong>Modélisation des données :</strong> Dictionnaire des données, MCD (Modèle conceptuel de données), Schéma relationnel en 3FN et Dépendances fonctionnelles.
+        </p>
+        <p>
+            ✅ <strong>Implémentation physique dans MS Access :</strong> Création de tables
+        </p>
+        <p>
+            ✅ <strong>Alimentation de la base :</strong> Importation de fichiers plats et Migration entre SGBDR
+        </p>
+        <p>
+            ✅ <strong>Validation :</strong> Requêtes SQL de test
+        </p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE202">
+    <h3>SAE 2-02 : Estimation par sondage simple</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE202/SAE202 photo1.png" alt="Image projet 1 - 1" />
+        <img src="SAE202/SAE202 photo2.png" alt="Image projet 1 - 2" />
+        <img src="SAE202/SAE202 photo3.png" alt="Image projet 1 - 1" />
+        <img src="SAE202/SAE202 photo4.png" alt="Image projet 1 - 2" />
+        <img src="SAE202/SAE202 photo5.png" alt="Image projet 1 - 1" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+        
+        <p>
+          AC12.01 | Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)
+        </p>
+        <p>
+          AC12.02 | Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées
+        </p>
+        <p>
+          AC12.03 | Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique
+        </p>
+        <p>
+          AC12.04 | Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables.
+        </p>
+        <p>
+          AC12.05 | Comprendre l’intérêt de l’utilisation d’un modèle probabiliste
+        </p>
+        <p>
+          AC12.06 | Appréhender la notion de fluctuation d’échantillonnage, notamment à l’aide de simulations probabilistes
+        </p>
+          
+        <h3>Objectifs :</h3>
+        <p>
+            <strong> 1- Manipuler des jeux de données réels avec RStudio :</strong>
+        </p>
+        <p>
+            o Utilisation de notebooks pour documenter l’analyse.
+        </p>
+        <p>
+            o Chargement et exploration de jeux de données au format .RData, .xlsx, etc.
+        <p>
+        <p>
+            <strong> 2- Estimation de paramètres statistiques :</strong>
+        </p>
+        <p>
+            o Estimer des paramètres (moyenne, écart-type, proportion) à partir d’échantillons.
+        </p>
+        <p>
+            o Comparer les estimations issues d’un échantillon à la vraie valeur sur la population.
+        </p>
+        <p>
+            <strong> 3- Construction et interprétation d’intervalles de confiance :</strong>
+        <p>
+            o Savoir construire un intervalle de confiance à 90% ou 95% pour une moyenne ou une proportion.
+        </p>
+        <p>
+            o Vérifier expérimentalement la validité des intervalles sur plusieurs répétitions.
+        </p>
+        <p>
+            <strong> 4- Tester l’adéquation d’une loi normale :</strong>
+        </p>
+        <p>
+            o Estimer les paramètres d’une loi normale (m, σ).
+        </p>
+        <p>
+            o Définir un intervalle de fluctuation et voir si les données y adhèrent.
+        </p>
+        <p>
+            o Comparer l’ajustement théorique avec l’observation expérimentale.
+        </p>
+        <p>
+            <strong> 5- Utilisation de lois de probabilité :</strong>
+        <p>
+            o Approximations binomiale / normale.
+        </p>
+        <p>
+            o Calcul de probabilités à l’aide des fonctions qnorm(), pbinom()...
+        </p>
+        <p>
+            <strong> 6- Travailler sur des populations stratifiées :</strong>
+        </p>
+        <p>
+            o Comprendre l’effet de la stratification sur la qualité de l’estimation.
+        </p>
+        <p>
+            o Construire un échantillon stratifié selon la structure réelle de la population.
+        </p>
+        <p>
+            o Calculer un estimateur pondéré et son intervalle de confiance.
+        </p>
+        <h3>Compétences développées :</h3>
+        <p>
+            ✅ <strong>Différence entre estimateurs biaisés et non biaisés:</strong> (Ex : la fonction var() divise par n-1, ce qui est adapté en inférence).
+        </p>
+        <p>
+            ✅ <strong>Savoir manipuler des échantillons dans R :</strong> Extraire un échantillon avec sample() et appliquer des boucles (for) pour répéter une simulation.
+        </p>
+        <p>
+            ✅ <strong> Construire et interpréter un intervalle de fluctuation :</strong> Utiliser qnorm() pour trouver les bornes théoriques.
+        </p>
+        <p>
+            ✅ <strong>Comprendre la loi suivie par un nombre de succès :</strong> Identifier une loi binomiale comme modèle de répétitions indépendantes.
+        </p>
+        <p>
+            ✅ <strong>Estimer la moyenne d’une population à partir d’un échantillon :</strong> Calculer E(X), V(X), et vérifier si la vraie moyenne est dans l’intervalle.
+        </p>
+        <p>
+            ✅ <strong>Estimer une proportion et comprendre les facteurs qui influencent l’intervalle :</strong> influence de la taille de l’échantillon et du niveau de confiance.
+        </p>
+        <p>
+            ✅ <strong>Appliquer l’échantillonnage stratifié à une population réelle (ex : communes de Bretagne) :</strong> Comparaison entre échantillonnage simple aléatoire et stratifié et construction d’un estimateur pondéré de la moyenne pour les strates.
+        </p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE203">
+    <h3>SAE 2-03 : Analyse de données avec R</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE 203/SAE203 photo1.png" alt="Image projet 1 - 1" />
+        <img src="SAE 203/SAE203 photo2.png" alt="Image projet 1 - 2" />
+        <img src="SAE 203/SAE203 photo3.png" alt="Image projet 1 - 1" />
+        <img src="SAE 203/SAE203 photo4.png" alt="Image projet 1 - 2" />
+        <img src="SAE 203/SAE203 photo5.png" alt="Image projet 1 - 1" />
+        <img src="SAE 203/SAE203 photo6.png" alt="Image projet 1 - 1" />
+        <img src="SAE 203/SAE203 photo7.png" alt="Image projet 1 - 2" />
+        <img src="SAE 203/SAE203 photo8.png" alt="Image projet 1 - 1" />
+        <img src="SAE 203/SAE203 photo9.png" alt="Image projet 1 - 2" />
+        <img src="SAE 203/SAE203 photo10.png" alt="Image projet 1 - 1" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+        
+        <p>
+          AC12.01 | Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)
+        </p>
+        <p>
+          AC12.02 | Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées
+        </p>
+        <p>
+          AC12.03 | Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique
+        </p>
+        <p>
+          AC12.04 | Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables.
+        </p>
+        <p>
+          AC12.05 | Comprendre l’intérêt de l’utilisation d’un modèle probabiliste
+        </p>
+        <p>
+          AC12.06 | Appréhender la notion de fluctuation d’échantillonnage, notamment à l’aide de simulations probabilistes
+        </p>
+          
+        <h3>Objectifs :</h3>
+        <p>
+            <strong> L’objectif principal de la SAE203 est de mettre en pratique une démarche complète d’analyse de données statistiques à l’aide du langage R. À partir d’un jeu de données réelles, et parmi ses objectifs on trouve :</strong>
+        </p>
+        <p>
+            o Choisir une problématique pertinente,
+        </p>
+        <p>
+            o Réaliser une analyse exploratoire (univariée, bivariée),
+        <p>
+        <p>
+            o Choisir un modèle explicatif simple (régression linéaire ou polynomiale),
+        </p>
+        <p>
+            o Comparer les modèles,
+        </p>
+        <p>
+            o Interpréter les résultats,
+        </p>
+        <p>
+            o Rédiger un rapport clair et structuré.
+        <p>
+
+        <h3>Compétences développées :</h3>
+        <p>
+            Cette SAE m'a appris à mobiliser des outils statistiques pour répondre à une question concrète à partir des données, et il m'a appris aussi à :
+        </p>
+        <p>
+            ✅ <strong>Analyser des données statistiques:</strong> Analyser des données statistiques, réaliser des visualisations (histogrammes, nuages de points, corrélogrammes) et interpréter des distributions et des corrélations.
+        </p>
+        <p>
+            ✅ <strong> Construire et interpréter un intervalle de fluctuation :</strong> Utiliser qnorm() pour trouver les bornes théoriques.
+        </p>
+        <p>
+            ✅ <strong>Modéliser une relation entre deux variables :</strong> Construire un modèle de régression linéaire ou polynomial, calculer les estimateurs des coefficients à la main et avec lm() dans R et analyser les résidus et la qualité d’ajustement.
+        </p>
+        <p>
+            ✅ <strong>Utiliser R pour l’analyse :</strong> Manipuler des données (import, sélection, transformation), utiliser des packages (tidyverse, corrplot, etc.) et générer des graphiques et des tableaux de résultats.
+        </p>
+        <p>
+            ✅ <strong>Communiquer les résultats d’une analyse :</strong> Communiquer les résultats d’une analyse, formuler une problématique et justifier les choix méthodologiques et rédiger des interprétations claires et rigoureuses.
+        </p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE204">
+    <h3>SAÉ 2-04 Datavisualiation (Challenge Dataviz)</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE 204/SAE204.png" alt="Image projet 1 - 1" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+        <p>
+            AC13.01 | Prendre connaissance des biais rencontrés dans la mise en place d’une enquête
+        <p>
+           AC13.02 | Identifier l’importance de contextualiser ses données
+        </p>
+         <p>
+            AC13.03 | Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents
+         </p>
+         <p>
+            AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie
+         </p>
+         <p>
+            AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie
+         </p>
+         <p>
+            AC13.06 | Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats
+         </p>
+         <h3>Objectifs :</h3>
+        <p>
+            o Apprendre à exploiter un jeu de données statistiques complexes.
+        </p>
+        <p>
+            o Concevoir une datavisualisation impactante et informative.
+        </p>
+        <p>
+            o Adapter la forme à un public non spécialiste, en rendant les résultats accessibles.
+        </p>
+        <p>
+            o Travailler en groupe sur un support de communication visuel à destination d’un organisme officiel (INSEE).
+        </p>
+        <h3>Compétences développées :</h3>
+        <p>
+            ✅ <strong>Analyse statistique</strong> de données issues de recensements (fichiers Excel).
+        </p>
+        <p>
+            ✅ <strong>Choix </strong>et conception de graphiques pertinents (barres, camemberts, histogrammes).
+        </p>
+        <p>
+            ✅ <strong>Synthèse d’informations complexes</strong> sous forme de messages-clés.
+        </p>
+        <p>
+            ✅ <strong>Maîtrise </strong>des outils de mise en page graphique (ex. Canva, PowerPoint).
+        </p>
+        <p>
+            ✅ <strong>Travail collaboratif</strong> et respect d’un cahier des charges.
+        </p>
+    </div>
+  </section>
+
+  <section class="project-section" id="SAE206">
+    <h3>SAÉ 2-06 : Analyse de données, reporting et datavisualisation</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="SAE 206/SAE206 photo1.png" alt="Image projet 1 - 1" />
+        <img src="SAE 206/SAE206 photo2.png" alt="Image projet 1 - 2" />
+        <img src="SAE 206/SAE206 photo4.png" alt="Image projet 1 - 4" />
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <div class="project-details">
+        
+        <p>
+          AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client
+        </p>
+        <p>
+          AC11.02 | Respecter les formalismes de notation
+        </p>
+        <p>
+          AC11.03 | Connaître la syntaxe des langages et savoir l'utiliser
+        </p>
+        <p>
+          AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter
+        </p>
+        <p>
+          AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d'usage
+        </p>
+        <p>
+          AC11.06 | Prendre conscience de l’intérêt de la programmation
+        </p>
+          
+        <h3>L'objectif de cette SAE : </h3>
+        <p>
+            o Concevoir une fiche de synthèse automatisée à destination des patients, à partir de leurs réponses à des questionnaires médicaux.
+        </p>
+        <p>
+            o Utiliser un nouveau jeu de données médicales complexes (50 patients fictifs, 10 fichiers CSV) fourni par l’AP-HP.
+        </p>
+        <p>
+            o Intégrer plusieurs scores de santé pour donner un aperçu global de la condition du patient.
+        </p>
+        <p>
+            o Rendre les résultats clairs et compréhensibles pour un public non-expert.
+        </p>
+        <h3>Ce que j’ai appris grâce à cette SAE :</h3>
+        <p>
+            ✅ Analyse de données médicales avec R : nettoyage, calculs de scores, regroupement
+        </p>
+        <p>
+            ✅ Utilisation de VS Code et RMarkdown pour générer automatiquement des fiches PDF/HTML personnalisées.
+        </p>
+        <p>
+            ✅ Réalisation de visualisations pertinentes (graphique radar et ).
+        </p>
+        <p>
+            ✅ Rencontres client (Impact Réunion) pour discuter des incohérences, des attentes, et reformuler l’objectif du projet
+        </p>
+        <p>
+            ✅ Gestion d’un projet itératif avec mises à jour des fichiers (maladies, nouvelles variables, nouveaux patients).
+        </p>
+        <p>
+            ✅ Rédaction d’un rapport de projet complet pour détailler la méthodologie, les analyses et les résultats.
+        </p>
+        <p>
+            ✅ Meilleure compréhension des enjeux médicaux et éthiques liés à la restitution des données de santé.
+        </p>
+    </div>
+  </section>
+
+  <footer>
+    2025 Mon Portfolio - BUT SD1
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const projectButtons = document.querySelectorAll('.project-navigation button');
+      const projectSections = document.querySelectorAll('.project-section');
+
+      // Fonction pour masquer tous les projets
+      const hideAllProjects = () => {
+        projectSections.forEach(section => {
+          section.classList.remove('active');
+        });
+        projectButtons.forEach(button => {
+          button.classList.remove('selected'); // Désélectionne tous les boutons
+        });
+      };
+
+      // Fonction pour afficher un projet spécifique
+      const showProject = (targetId) => {
+        hideAllProjects(); // Masque tout d'abord tous les projets
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.classList.add('active'); // Affiche le projet ciblé
+
+          // Sélectionne le bouton correspondant
+          const correspondingButton = document.querySelector(`.project-navigation button[data-target="${targetId}"]`);
+          if (correspondingButton) {
+            correspondingButton.classList.add('selected');
+          }
+
+          // Réinitialise le carrousel pour la section active
+          const carousel = targetSection.querySelector('.carousel');
+          if (carousel) {
+            const imagesContainer = carousel.querySelector('.carousel-images');
+            imagesContainer.style.transform = 'translateX(0%)';
+            carousel.dataset.currentIndex = 0;
+          }
+        }
+      };
+
+      // Gestionnaires d'événements pour les boutons de navigation
+      projectButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const targetId = button.dataset.target;
+          showProject(targetId);
+        });
+      });
+
+      // --- Fonctionnalité du carrousel (votre code existant, légèrement ajusté) ---
+      const carousels = document.querySelectorAll('.carousel');
+
+      carousels.forEach(carousel => {
+        const imagesContainer = carousel.querySelector('.carousel-images');
+        const images = imagesContainer.querySelectorAll('img');
+        carousel.dataset.currentIndex = 0; // Initialise l'index pour chaque carrousel
+
+        const updateCarousel = () => {
+          const index = parseInt(carousel.dataset.currentIndex);
+          imagesContainer.style.transform = `translateX(${-index * 100}%)`;
+        };
+
+        const prevButton = carousel.querySelector('.carousel-btn.prev');
+        const nextButton = carousel.querySelector('.carousel-btn.next');
+
+        if (prevButton) {
+          prevButton.addEventListener('click', () => {
+            let index = parseInt(carousel.dataset.currentIndex);
+            index = (index - 1 + images.length) % images.length;
+            carousel.dataset.currentIndex = index;
+            updateCarousel();
+          });
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener('click', () => {
+            let index = parseInt(carousel.dataset.currentIndex);
+            index = (index + 1) % images.length;
+            carousel.dataset.currentIndex = index;
+            updateCarousel();
+          });
+        }
+      });
+
+      // Affiche le premier projet par défaut au chargement de la page
+      if (projectButtons.length > 0) {
+        showProject(projectButtons[0].dataset.target);
+      }
+    });
+  </script>
+
+</body>
+</html>
